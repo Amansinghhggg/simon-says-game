@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #00ff99;
+    text-shadow: 0 0 5px #00ff99;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    height: 150px;
+    width: 150px;
+    border: 3px solid #fff;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    margin: 10px 3px 3px 3px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.red {
+    background-color: #e74c3c;
+}
+.yellow {
+    background-color: #f1c40f;
+}
+.green {
+    background-color: #2ecc71;
+}
+.purple {
+    background-color: #8e44ad;
+}
+
+/* Flash effect */
+.flash {
+    animation: flashGlow 0.5s ease-in-out;
+}
+
+@keyframes flashGlow {
+    0% { box-shadow: 0 0 20px white; }
+    100% { box-shadow: 0 0 0px transparent; }
+}
+
+/* Red flash for game over */
+.redflash {
+    animation: redFlashGlow 0.5s ease-in-out;
+}
+
+@keyframes redFlashGlow {
+    0%, 100% {
+        background-color: #e74c3c;
+        box-shadow: 0 0 30px red;
+    }
+    50% {
+        background-color: #ff0000;
+        box-shadow: 0 0 50px #ff0000;
+    }
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+    .btn {
+        height: 100px;
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3, h2 {
+        font-size: 1rem;
+    }
+}
+#startBtn {
+    text-decoration: black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00ffff;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn:hover {
+    background-color: #00cc77;
+}
